@@ -9,7 +9,15 @@
   }
   ```
 */
+import moment from 'moment';
 
+const events = [
+  { id: 106, startsAt: '2021-01-23T13:01:11Z', endsAt: '2021-01-27T15:01:11Z', title: 'Daily walk'},
+  { id: 107, startsAt: '2021-01-30T13:01:11Z',  endsAt: '2021-01-31T15:01:11Z',  title: 'Daily run' },
+  { id: 108, startsAt: '2021-01-27T17:01:11Z',  endsAt: '2021-01-27T22:01:11Z',  title: 'Dinner' },
+  { id: 566, startsAt: '2021-01-27T13:01:11Z',  endsAt: '2021-01-29T15:01:11Z',  title: 'Checkup' },
+  { id: 5676, startsAt: '2021-01-30T13:01:11Z',  endsAt: '2021-01-31T15:01:11Z',  title: 'Flight' }
+]
 /** 
   Take an array of events and return an object that is a  mapping from the 'day' to the events occuring on that day.
   The keys should be the day-difference to the earliest occuring event.
@@ -30,9 +38,17 @@
 
  Your solution should not modify any of the function arguments
 */
+
+
+
 const groupEventsByDay = (events) => {
+  
+
+
   return events;
 };
+
+groupEventsByDay(events);
 
 /** 
   Adjust the start and end date of an event so it maintains its total duration, but is moved `toDay`.
