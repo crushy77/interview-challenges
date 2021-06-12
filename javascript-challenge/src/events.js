@@ -38,8 +38,15 @@ const events = [
 
  Your solution should not modify any of the function arguments
 */
-
-
+const sortEventsAscending = (events) => {
+  return events.sort((date1, date2) => {
+    let x = moment(date1.startsAt);
+    let y = moment(date2.startsAt);
+      return x-y;
+    })
+   
+}
+console.log(sortEventsAscending(events))
 
 const groupEventsByDay = (events) => {
   
