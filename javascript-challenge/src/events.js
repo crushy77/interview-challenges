@@ -46,10 +46,32 @@ const sortEventsAscending = (events) => {
     })
    
 }
-console.log(sortEventsAscending(events))
+
+const calculateDayDifference = (start, end) => {
+  let a = moment(start);
+  let b = moment(end);
+
+  return a.diff(b, 'days');
+}
 
 const groupEventsByDay = (events) => {
-  
+  let eventsAscending = sortEventsAscending(events);
+  events = {};
+  let start  = eventsAscending[0].startsAt;
+
+  eventsAscending.forEach((item)=> {
+    let dayDifference = calculateDayDifference(item.startsAt, start);
+    //console.log(dayDifference)
+    
+    if(events[dayDifference] === undefined) {
+      events[dayDifference] = new Array(item);
+    } else {
+      events[dayDifference].push(item);
+    }
+    
+  })
+
+  console.log(events)
 
 
   return events;
