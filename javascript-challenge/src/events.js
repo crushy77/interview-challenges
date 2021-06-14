@@ -48,7 +48,7 @@ const calculateDayDifference = (start, end) => {
 };
 
 const groupEventsByDay = (events) => {
-  sortsEventsAscending(events);
+  sortEventsAscending(events);
   let eventsAscending = events;
   let start  = eventsAscending[0].startsAt;
   events = {};
@@ -133,7 +133,4 @@ const moveEventToDay = (eventsByDay, id, toDay) => {
   return eventsByDay;
 };
 
-
-export {
-  groupEventsByDay, moveEventToDay
-}
+module.exports = {groupEventsByDay, moveEventToDay};
