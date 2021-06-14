@@ -1,4 +1,5 @@
-import {groupEventsByDay, moveEventToDay} from './events'
+import {groupEventsByDay, moveEventToDay} from './events';
+import {events, eventsResult} from './mockEvents';
 
 test('groupEventsByDay', () => {});
 
