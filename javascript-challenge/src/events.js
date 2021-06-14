@@ -30,7 +30,7 @@
 
  Your solution should not modify any of the function arguments
 */
-import moment from 'moment';
+const moment = require('moment')
 
 const sortEventsAscending = (events) => {
   events.sort((date1, date2) => {
