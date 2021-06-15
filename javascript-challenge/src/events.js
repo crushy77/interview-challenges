@@ -30,7 +30,7 @@
 
  Your solution should not modify any of the function arguments
 */
-const moment = require('moment')
+const moment = require('moment');
 
 const sortEventsAscending = (events) => {
   events.sort((date1, date2) => {
@@ -68,6 +68,8 @@ const groupEventsByDay = (events) => {
 
   return events;
 };
+
+groupEventsByDay(events);
 /** 
   Adjust the start and end date of an event so it maintains its total duration, but is moved `toDay`.
   `eventsByDay` should be the same as the return value of `groupEventsByDay`
@@ -104,7 +106,6 @@ const groupEventsByDay = (events) => {
   Your solution should not modify any of the function arguments
 */
 
-
 const moveEventToDay = (eventsByDay, id, toDay) => {
   for (let i in eventsByDay) {
     let eventIndex = eventsByDay[i].findIndex((event) => event.id === id);
@@ -114,10 +115,10 @@ const moveEventToDay = (eventsByDay, id, toDay) => {
       
       let dayDifference = toDay-i;
       let newStartsAt = moment(event.startsAt).add(dayDifference, 'days');
-      event.startsAt = moment(newStartsAt).format();
+      event.startsAt = moment.utc(newStartsAt).format()
       
       let newEndsAt = moment(event.endsAt).add(dayDifference, 'days');
-      event.endsAt = moment(newEndsAt).format();
+      event.endsAt = moment.utc(newEndsAt).format()
 
       let newEvent = eventsByDay[toDay];
       if(newEvent === undefined) {
@@ -127,10 +128,11 @@ const moveEventToDay = (eventsByDay, id, toDay) => {
         newEvent.push(event);
       }
       sortEventsAscending(newEvent);
-      break;
     }
   }
   return eventsByDay;
 };
+moveEventToDay(eventsByDay, id, toDay)
+
 
 module.exports = {groupEventsByDay, moveEventToDay};
