@@ -10,6 +10,9 @@
   ```
 */
 
+
+
+
 /** 
   Take an array of events and return an object that is a  mapping from the 'day' to the events occuring on that day.
   The keys should be the day-difference to the earliest occuring event.
@@ -65,11 +68,10 @@ const groupEventsByDay = (events) => {
     
   });
 
-
+  // console.log(events)
   return events;
 };
 
-groupEventsByDay(events);
 /** 
   Adjust the start and end date of an event so it maintains its total duration, but is moved `toDay`.
   `eventsByDay` should be the same as the return value of `groupEventsByDay`
@@ -132,7 +134,5 @@ const moveEventToDay = (eventsByDay, id, toDay) => {
   }
   return eventsByDay;
 };
-moveEventToDay(eventsByDay, id, toDay)
-
 
 module.exports = {groupEventsByDay, moveEventToDay};
