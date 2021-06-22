@@ -328,6 +328,7 @@ section.section-exercise .mobile-menu a {
         align-items: center;
     }
   }
+  
   @media (min-width: 992px) {
     .container {
       padding-right: 70px;
