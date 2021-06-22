@@ -26,7 +26,7 @@
       { id: 156, startsAt: '2021-01-27T17:01:11Z',  endsAt: '2021-01-27T22:01:11Z',  title: 'Dinner' },
     ],
     2: [
-      { id: 5676, startsAt: '2021-01-29T13:01:11Z',  endsAt: '2021-01-27T15:01:11Z',  title: 'Daily walk' },
+      { id: 5676, startsAt: '2021-01-29T13:01:11Z',  endsAt: '2021-01-29T15:01:11Z',  title: 'Daily walk' },
     ]
   }
  ```
@@ -80,7 +80,7 @@ const groupEventsByDay = (events) => {
 
   Example:
   ```
-  eventsByDay(
+  moveEventToDay(
     {
       0: [
         { id: 106, startsAt: '2021-01-27T13:01:11Z',  endsAt: '2021-01-27T15:01:11Z',  title: 'Daily walk' },      
