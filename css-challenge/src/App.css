@@ -324,8 +324,7 @@ section.section-exercise .mobile-menu a {
     }
 
     section.section-exercise .mood-item {
-        padding: 0 40px;
-        justify-content: space-between;
+        justify-content:flex-start;
         align-items: center;
     }
   }
@@ -333,7 +332,6 @@ section.section-exercise .mobile-menu a {
     .container {
       padding-right: 70px;
       padding-left: 70px;
-      color: red;
     }
 
     .active::after {
@@ -345,7 +343,6 @@ section.section-exercise .mobile-menu a {
     .container {
       padding-right: 110px;
       padding-left: 110px;
-      color: blue;
     }
 
     .active::after {
@@ -354,8 +351,7 @@ section.section-exercise .mobile-menu a {
     }
 
     section.section-exercise .mood-item {
-        padding: 20px;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: center;
     }
 
